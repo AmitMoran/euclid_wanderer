@@ -1,0 +1,7 @@
+<library path="lib/librealsense_wanderer_nodelet">
+  <class name="realsense_wanderer/WandererNodelet" type="realsense_wanderer::WandererNodelet" base_class_type="nodelet::Nodelet">
+  <description>
+  Intel(R) RealSense(TM) wanderer nodelet.
+  </description>
+  </class>
+</library>

@@ -1,0 +1,33 @@
+<launch>
+
+	
+	<arg name="session" default="1"/>
+	<arg name="manager" default="standalone_nodelet_wanderer" />
+	
+	<arg name="MinY" default="-0.10" />
+	<arg name="MaxY" default="1.0" />
+	<arg name="MinX" default="-0.25" />
+	<arg name="MaxX" default="0.25" />
+	<arg name="MinZ" default="0.3" />
+	<arg name="MaxZ" default="3.5" />
+	
+	<arg name="MinBlobSize" default="1000" />
+	
+	<node pkg="nodelet" type="nodelet" name="$(arg manager)"  args="manager" output="screen"/>
+  	
+  	<node pkg="nodelet" type="nodelet" name="realsense_wanderer"
+	args="load realsense_wanderer/WandererNodelet $(arg manager)
+	    MinY $(arg MinY) 
+        MaxY $(arg MaxY)
+        MinX $(arg MinX)
+        MaxX $(arg MaxX)
+        MinZ $(arg MinZ)
+        MaxZ $(arg MaxZ)
+       
+        MinBlobSize $(arg MinBlobSize)">
+	
+		<remap from="wanderer/goal" to="depth_follower/goal" />
+	</node>
+
+  
+</launch> 
