@@ -39,19 +39,6 @@ Point Cloud
 	Enabled(bool, default: true)
 		Enable flag for the algorithm
 		
-## Services
-    None
-
-
-## Version
-    1.0
-
-## Known issues:
-
-
-## Tech and dependencies 
-
-
 # Contributing to the Project
 
 The Intel&reg; Euclid&trade; Wanderer sample is developed and distributed under
