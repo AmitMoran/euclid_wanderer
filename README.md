@@ -39,7 +39,7 @@ Point Cloud
 	Enabled(bool, default: true)
 		Enable flag for the algorithm
 		
-# Contributing to the Project
+## Contributing to the Project
 
 The Intel&reg; Euclid&trade; Wanderer sample is developed and distributed under
 a BSD-3 license as noted in [licenses/License.txt](licenses/License.txt).
