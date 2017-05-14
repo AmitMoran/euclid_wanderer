@@ -1,10 +1,56 @@
 # Intel&reg; Euclid&trade; Wanderer sample.
 
+This nodelet register to pointcloud messages and publishes a goal for the robot movement control to handle. The algorithm is such that the robot should advance as long as it sees there is where to advance. if an obstacle is detected, the robot will find the direction in which it is most likely not to have obstacle, and will continue there. If the robot is too close to an obstacle, it will reverse. 
+
 http://www.intel.com/Euclid_XXX
 
 http://wiki.ros.org/EuclidWiki_XXX
 
-# Usage
+## Subscribed Topics
+
+    camera/depth/points (sensor_msgs/PointCloud2)
+        Registered XYZ point cloud.
+	
+## Published Topics
+
+Point Cloud
+
+    depth_follower/goal (geometry_msgs::PointStamped)
+		X,Y,Z goal of where to follow
+	depth_follower/marker (visualization_msgs::Marker)
+		X,Y,Z for rviz visualization 
+
+## Parameters
+
+    MinY(double, default: 0) 
+         The minimum y position of the points in the box
+    MaxY(double, default: 20000) 
+         The maximum y position of the points in the box
+    MinX(double, default: 0) 
+         The minimum x position of the points in the box
+    MaxX(double, default: 20000) 
+         The maximum x position of the points in the box
+	MinZ(double, default: 0) 
+         The minimum z position of the points in the box
+    MaxZ(double, default: 20000) 
+         The maximum z position of the points in the box		
+	MinBlobSize(int, default: 4000)
+		Minimum number of points to consider as a blob
+	Enabled(bool, default: true)
+		Enable flag for the algorithm
+		
+## Services
+    None
+
+
+## Version
+    1.0
+
+## Known issues:
+
+
+## Tech and dependencies 
+
 
 # Contributing to the Project
 
