@@ -2,9 +2,9 @@
 
 This nodelet register to pointcloud messages and publishes a goal for the robot movement control to handle. The algorithm is such that the robot should advance as long as it sees there is where to advance. if an obstacle is detected, the robot will find the direction in which it is most likely not to have obstacle, and will continue there. If the robot is too close to an obstacle, it will reverse. 
 
-http://www.intel.com/Euclid_XXX
+[Intel® Euclid™ Community Site](http://www.euclidcommunity.intel.com).
 
-http://wiki.ros.org/EuclidWiki_XXX
+[Intel® Euclid™ Support Forum](http://www.intel.com/content/www/us/en/support/emerging-technologies/intel-euclid-development-kit.html).
 
 ## Subscribed Topics
 
