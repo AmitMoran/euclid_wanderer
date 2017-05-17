@@ -1,4 +1,4 @@
-# Intel&reg; Euclid&trade; Wanderer sample.
+# Robot wanderer sample Intel&reg; Euclid&trade;
 
 This nodelet register to pointcloud messages and publishes a goal for the robot movement control to handle. The algorithm is such that the robot should advance as long as it sees there is where to advance. if an obstacle is detected, the robot will find the direction in which it is most likely not to have obstacle, and will continue there. If the robot is too close to an obstacle, it will reverse. 
 
